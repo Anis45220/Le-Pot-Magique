@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#faf7f0" />
+  <meta name="description" content="Le Pot Magique : tirage au sort équitable, suivi de participation et plan de classe pour les enseignants." />
+  <title>Le Pot Magique — La classe à portée de main</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d8e9da'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='39'%3E✏️%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs" aria-hidden="true">
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="m4 20 11-11M14 4l.6-2L16 4l2 .6-2 1.4-.6 2-.8-2L12 5zM20 12l.6-2L22 12l2 .6-2 1.4-.6 2-.8-2L18 13zM8 2l.5-1L9 2l1 .5L9 3l-.5 1L8 3l-1-.5z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h17M8 16v-5m5 5V7m5 9V4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2ZM16 5a3 3 0 0 1 0 6m1 3a5 5 0 0 1 4 5v1"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 10h18M10 10v11"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 4h3m3 0h2m-8 4h3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m10 2-.6 2.5-2 .9L5 4l-3 3 1.4 2.4-.9 2L0 12l2.5.6.9 2L2 17l3 3 2.4-1.4 2 .9L10 22h4l.6-2.5 2-.9L19 20l3-3-1.4-2.4.9-2L24 12l-2.5-.6-.9-2L22 7l-3-3-2.4 1.4-2-.9L14 2z" transform="translate(1 1) scale(.91)"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 5m0 3v.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 17V4m-5 5 5-5 5 5M4 17v4h16v-4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-7M3 3v5h5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3m3 0-1 14H7L6 7m4 4v6m4-6v6"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="m4 20 4-.7L20 7l-3-3L4.7 16 4 20ZM14 7l3 3"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 6 4 9 9 10 5-1 9-4 9-10V6z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+  </svg>
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar" id="sidebar">
+      <a href="#tirage" class="brand" data-page="tirage" aria-label="Accueil Le Pot Magique">
+        <span class="brand-mark" aria-hidden="true"><span>✏</span><span>✦</span></span>
+        <span class="brand-text"><strong>Le Pot Magique</strong><small>MA PETITE CLASSE</small></span>
+      </a>
+      <div class="side-kicker">MON ESPACE</div>
+      <nav class="primary-nav" aria-label="Navigation principale">
+        <button class="nav-item active" data-page="tirage"><svg class="icon"><use href="#i-wand"/></svg><span>Tirage au sort</span></button>
+        <button class="nav-item" data-page="stats"><svg class="icon"><use href="#i-chart"/></svg><span>Statistiques</span></button>
+        <button class="nav-item" data-page="students"><svg class="icon"><use href="#i-users"/></svg><span>Mes élèves</span></button>
+        <button class="nav-item" data-page="layout"><svg class="icon"><use href="#i-layout"/></svg><span>Plan de classe</span></button>
+        <button class="nav-item" data-page="history"><svg class="icon"><use href="#i-calendar"/></svg><span>Historique</span></button>
+        <button class="nav-item" data-page="questions"><svg class="icon"><use href="#i-book"/></svg><span>Mes questions</span></button>
+      </nav>
+      <div class="side-kicker second-kicker">PRÉFÉRENCES</div>
+      <nav class="secondary-nav" aria-label="Préférences">
+        <button class="nav-item" data-page="settings"><svg class="icon"><use href="#i-settings"/></svg><span>Paramètres</span></button>
+        <button class="nav-item" data-action="glossary"><svg class="icon"><use href="#i-help"/></svg><span>Comprendre la data</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-illustration" aria-hidden="true">✏️ <span>✦</span> 📚</div>
+        <p>Une petite chance<br />pour chacun, chaque jour.</p>
+        <small>Conçu pour les enseignants ♡</small>
+      </div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-btn mobile-menu" data-action="mobile-menu" aria-label="Ouvrir le menu">☰</button><span class="today-pill" id="todayLabel"></span></div>
+        <div class="topbar-right"><label class="year-select-wrap"><span>Ma classe</span><select id="globalYearSelect" aria-label="Année scolaire"></select></label><button class="topbar-help" data-action="glossary" title="Comprendre les statistiques"><svg class="icon"><use href="#i-help"/></svg></button><span class="avatar" aria-hidden="true">M</span></div>
+      </header>
+      <main id="pageContent" class="page-content" tabindex="-1" aria-live="polite"><div class="loading-screen"><span class="loading-emoji">✏️</span><p>Préparation du pot magique…</p></div></main>
+      <footer class="app-footer"><span><span class="status-dot"></span><span id="saveStatus">Données enregistrées sur cet appareil</span></span><span>Fait avec ♡ pour la classe</span></footer>
+    </div>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" aria-live="polite"></div>
+  <div id="projectorRoot"></div>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+  <input id="importFile" type="file" accept="application/json,.json" hidden />
+  <script src="./app.js" defer></script>
+</body>
+</html>
